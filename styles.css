@@ -1,0 +1,257 @@
+:root {
+    --about-background-color: linear-gradient(
+      to bottom,
+      rgba(46, 147, 160, 0.8),
+      rgba(36, 91, 128, 0.582)
+    );
+    --section-background-color-tech: linear-gradient(
+      to bottom ,
+      rgba(36, 91, 128, 0.582),
+      rgba(72, 23, 128, 0.658)
+    );
+    --section-background-color-project: linear-gradient(
+      to top,
+      rgba(21, 107, 187, 0.836),
+      rgba(72, 23, 128, 0.658)
+    );
+  --section-background-color-contact: linear-gradient(
+    to bottom left,
+    rgba(21, 107, 187, 0.836),
+    rgba(109, 35, 138, 0.8)
+  );
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(26, 70, 136);
+    padding: 10px;
+}
+
+/* Add styles for navigation links */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Style for navigation links (buttons) */
+nav a {
+    text-decoration: none;
+    padding: 8px 16px; 
+    border: 1px solid #587e8d; 
+    border-radius: 4px; 
+    color: #fff; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover effect on navigation links */
+nav a:hover {
+    background-color: rgb(121, 57, 57); 
+    color: #849ab4; 
+}
+
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+/* Style for About section */
+#about {
+    background: var(--about-background-color); 
+    padding: 20px;
+    text-align: center;
+}
+.about-box {
+    max-width: 40%; 
+    margin: 0 auto; 
+    text-align: center; 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    transition: background-color 0.3s ease; 
+    font-size: 20px;
+}
+
+.about-box:hover {
+    background-color: rgba(255, 255, 255, 1); 
+}
+
+
+/* Tech Stack section */
+#techstack {
+    background: var(--section-background-color-tech);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tech stack boxes */
+.techstack-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Tech Stack section */
+#techstack {
+    background: var(--section-background-color-tech);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Tech stack boxes */
+.techstack-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+/* Tech stack items */
+.tech-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tech-item {
+    flex: 0 0 80px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    overflow: hidden; 
+    text-align: center; 
+    margin: 10px; /* Add margin to create spacing */
+}
+
+/* Logo images */
+.tech-item img {
+    max-width: 100%;
+    max-height: 100px; 
+    object-fit: contain; 
+}
+
+/* Hover effect on click */
+.tech-item:hover {
+    transform: scale(1.05);
+}
+
+
+/* Projects section */
+#projects {
+    background: var(--section-background-color-project);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Project boxes */
+
+.project-box {
+    width: 45%;
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background-color: #f5f5f5; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+}
+
+.project-box a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hover effect on click */
+.project-box:hover {
+    transform: scale(1.05); 
+}
+
+/* Project title */
+.project-box h3 {
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    color: #333; 
+}
+
+/* Project description */
+.project-box p {
+    font-size: 16px; 
+    color: #666; 
+}
+
+/* Contact section */
+#contact {
+    background-color: #f9f9f9; 
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contact boxes container */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+/* Contact section */
+#contact {
+    background: var(--section-background-color-contact); 
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contact container */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Contact boxes */
+.contact-box {
+    width: 30%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    cursor: pointer;
+    transition: transform 0.3s ease; 
+    text-align: center;
+}
+
+.contact-box a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Contact logos */
+.contact-box img {
+    max-width: 100px; 
+    margin-bottom: 10px; 
+}
+
+/* Contact names */
+.contact-box p {
+    font-size: 16px; 
+}
+
