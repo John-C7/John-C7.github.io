@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Build Docker Image and Extract Static Files
+        run: |
+          docker pull johnc710/portfolio-v1
+          docker run -d --name temp-container johnc710/portfolio-v1
+          docker cp temp-container:/usr/share/nginx/html ./static-website
+          docker rm -f temp-container
+
+      - name: Set Up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Deploy to GitHub Pages
+        run: |
+          npm install -g http-server
+          http-server -p 8080 ./static-website
